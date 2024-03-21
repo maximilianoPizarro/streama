@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ./ConfigMap__v1_mpizarro-dev_my-streama-mysql.yaml
+- ./ServiceAccount__v1_mpizarro-dev_streama.yaml
+- ./Service__v1_mpizarro-dev_my-streama-mysql-headless.yaml
+- ./Service__v1_mpizarro-dev_my-streama-mysql.yaml
+- ./Service__v1_mpizarro-dev_my-streama.yaml
+- ./Secret__v1_mpizarro-dev_my-streama-mysql.yaml
+- ./StatefulSet_apps_v1_mpizarro-dev_my-streama-mysql.yaml
+- ./Deployment_apps_v1_mpizarro-dev_my-streama.yaml
+- ./HorizontalPodAutoscaler_autoscaling_v2_mpizarro-dev_my-streama.yaml
+- ./Route_route.openshift.io_v1_mpizarro-dev_maxvideo.yaml
